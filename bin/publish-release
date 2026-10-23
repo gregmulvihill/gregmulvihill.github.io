@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Publish a build of any tool (source can stay in a private repo) as a release in the
+# public site repo, where gregmulvihill.github.io lists it.
+# Usage: publish-release <tool> <version> [--notes "text" | --notes-file FILE] [--prerelease] <file>...
+set -euo pipefail
+SITE_REPO="gregmulvihill/gregmulvihill.github.io"
+
+[[ $# -ge 3 ]] || { sed -n '2,4p' "$0"; exit 2; }
+tool=$1 version=${2#v}; shift 2
+tag="${tool}-v${version}"
+exec gh release create "$tag" --repo "$SITE_REPO" --title "$tool $version" "$@"
