@@ -28,6 +28,8 @@
   details { font-size:14px; color:var(--muted); }
   details li { margin:2px 0; }
   .status { color:var(--muted); }
+  h2.section { font-size:22px; margin:40px 0 16px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+  .tool p.desc { margin:6px 0 0; }
 </style>
 </head>
 <body>
@@ -36,6 +38,15 @@
   <p class="sub">Software I build, free to download.
     <a href="https://github.com/gregmulvihill">GitHub</a> ·
     <a href="https://www.linkedin.com/in/gregmulvihill/">LinkedIn</a></p>
+  <h2 class="section">Web apps</h2>
+  <p class="status">Run in your browser, nothing to install.</p>
+  <section class="tool">
+    <h2><a href="https://gregmulvihill.github.io/climbing-cave/">Climbing Cave</a></h2>
+    <p class="desc">Interactive 3D designer for a home climbing cave: half-torus arch, panel cut lists, hold placement.</p>
+    <p class="meta"><a href="https://github.com/gregmulvihill/climbing-cave">source</a></p>
+  </section>
+
+  <h2 class="section">Downloads</h2>
   <div id="list"><p class="status">Loading releases…</p></div>
 </main>
 <script src="releases.js"></script>
